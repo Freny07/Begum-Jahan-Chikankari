@@ -4,6 +4,7 @@ import Heritage from '@/components/Heritage/Heritage';
 import ShopByPrice from '@/components/ShopByPrice/ShopByPrice';
 import ExploreStyles from '@/components/ExploreStyles/ExploreStyles';
 import FeaturedProducts from '@/components/FeaturedProducts/FeaturedProducts';
+import AsSeenOn from '@/components/AsSeenOn/AsSeenOn';
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <ExploreStyles />
       <FeaturedProducts title="Best Sellers" />
       <FeaturedProducts title="New Arrivals" />
+      <AsSeenOn />
     </>
   );
 }
