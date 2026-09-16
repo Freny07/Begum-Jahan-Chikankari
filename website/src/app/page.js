@@ -3,6 +3,7 @@ import Philosophy from '@/components/Philosophy/Philosophy';
 import Heritage from '@/components/Heritage/Heritage';
 import ShopByPrice from '@/components/ShopByPrice/ShopByPrice';
 import ExploreStyles from '@/components/ExploreStyles/ExploreStyles';
+import FeaturedProducts from '@/components/FeaturedProducts/FeaturedProducts';
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Heritage />
       <ShopByPrice />
       <ExploreStyles />
+      <FeaturedProducts title="Best Sellers" />
     </>
   );
 }

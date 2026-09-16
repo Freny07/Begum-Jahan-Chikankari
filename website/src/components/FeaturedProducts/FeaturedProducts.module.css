@@ -1,0 +1,115 @@
+.section {
+  padding: var(--section-padding) 0;
+  background-color: var(--color-bg-primary);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-10);
+  padding: 0 var(--space-8);
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-regular);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.carouselWrapper {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.track {
+  display: flex;
+  gap: var(--space-6);
+  padding: 0 var(--space-8);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Let the ProductCard handle its own dimensions, we just set the flex basis here */
+.slide {
+  flex: 0 0 calc(25% - (var(--space-6) * 3 / 4));
+  min-width: 280px;
+  scroll-snap-align: start;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-8) 0;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.controlBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-medium);
+  background-color: transparent;
+  color: var(--color-text-primary);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.controlBtn:hover {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-white);
+  border-color: var(--color-bg-dark);
+}
+
+.controlBtn svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .slide {
+    flex: 0 0 calc(33.333% - (var(--space-6) * 2 / 3));
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: 0 var(--space-4);
+  }
+
+  .track {
+    padding: 0 var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .slide {
+    flex: 0 0 calc(65vw);
+    min-width: unset;
+  }
+
+  .controls {
+    display: none;
+  }
+}
