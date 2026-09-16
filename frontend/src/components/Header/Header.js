@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
 import { useUI } from '@/context/UIContext';
 import { NAV_LINKS, WOMENS_CATEGORIES, MENS_CATEGORIES, SITE_NAME } from '@/lib/constants';
@@ -62,8 +63,14 @@ export default function Header() {
         {/* Logo */}
         <div className={styles.logoWrapper}>
           <Link href="/" className={styles.logo} aria-label={`${SITE_NAME} - Home`}>
-            Begum Jahan
-            <span className={styles.logoSub}>Chikankari</span>
+            <Image
+              src="/temp/logo-1.webp"
+              alt={`${SITE_NAME} Logo`}
+              width={200}
+              height={80}
+              style={{ objectFit: 'contain' }}
+              priority
+            />
           </Link>
         </div>
 
