@@ -14,6 +14,7 @@ export default function HomePage() {
       <ShopByPrice />
       <ExploreStyles />
       <FeaturedProducts title="Best Sellers" />
+      <FeaturedProducts title="New Arrivals" />
     </>
   );
 }
