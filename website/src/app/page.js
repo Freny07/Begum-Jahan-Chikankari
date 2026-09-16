@@ -5,6 +5,7 @@ import ShopByPrice from '@/components/ShopByPrice/ShopByPrice';
 import ExploreStyles from '@/components/ExploreStyles/ExploreStyles';
 import FeaturedProducts from '@/components/FeaturedProducts/FeaturedProducts';
 import AsSeenOn from '@/components/AsSeenOn/AsSeenOn';
+import FlagshipStore from '@/components/FlagshipStore/FlagshipStore';
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <FeaturedProducts title="Best Sellers" />
       <FeaturedProducts title="New Arrivals" />
       <AsSeenOn />
+      <FlagshipStore />
     </>
   );
 }
