@@ -1,0 +1,74 @@
+.philosophy {
+  padding: var(--section-padding-lg) 0;
+  background-color: var(--color-bg-primary);
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 var(--space-6);
+}
+
+.dividerTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.dividerLine {
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-border-medium);
+}
+
+.dividerIcon {
+  color: var(--color-accent-gold);
+  font-size: var(--text-lg);
+  line-height: 1;
+}
+
+.quote {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-light);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  line-height: var(--leading-loose);
+  margin-bottom: var(--space-10);
+}
+
+.quoteLine {
+  display: block;
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .quote {
+    font-size: var(--text-2xl);
+    line-height: 2;
+  }
+
+  .dividerTop {
+    margin-bottom: var(--space-8);
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    font-size: var(--text-xl);
+  }
+}
