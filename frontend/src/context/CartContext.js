@@ -89,6 +89,26 @@ export function CartProvider({ children }) {
   const openCart = useCallback(() => setIsCartOpen(true), []);
   const closeCart = useCallback(() => setIsCartOpen(false), []);
 
+  // Simple addItem for direct use (e.g., from PDP)
+  const addItem = useCallback((item) => {
+    setItems((prev) => {
+      const existingIndex = prev.findIndex((i) => i.id === item.id);
+
+      if (existingIndex > -1) {
+        const updated = [...prev];
+        updated[existingIndex] = {
+          ...updated[existingIndex],
+          quantity: updated[existingIndex].quantity + 1,
+        };
+        return updated;
+      }
+
+      return [...prev, { ...item, quantity: 1 }];
+    });
+
+    setIsCartOpen(true);
+  }, []);
+
   return (
     <CartContext.Provider
       value={{
@@ -98,7 +118,9 @@ export function CartProvider({ children }) {
         isCartOpen,
         isLoading,
         addToCart,
+        addItem,
         removeFromCart,
+        removeItem: removeFromCart,
         updateQuantity,
         clearCart,
         openCart,
