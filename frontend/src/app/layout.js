@@ -6,6 +6,7 @@ import Footer from '@/components/Footer/Footer';
 import AnnouncementBar from '@/components/AnnouncementBar/AnnouncementBar';
 import WhatsAppWidget from '@/components/WhatsAppWidget/WhatsAppWidget';
 import CartDrawer from '@/components/CartDrawer/CartDrawer';
+import SearchOverlay from '@/components/SearchOverlay/SearchOverlay';
 import ScrollReveal from '@/components/ScrollReveal/ScrollReveal';
 
 export const metadata = {
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
             <Footer />
             <WhatsAppWidget />
             <CartDrawer />
+            <SearchOverlay />
           </CartProvider>
         </UIProvider>
       </body>
