@@ -52,11 +52,37 @@ export default function Header() {
 
         {/* Desktop Left Nav */}
         <nav className={styles.navLeft} aria-label="Primary navigation">
-          {NAV_LINKS.left.map((link) => (
-            <Link key={link.href} href={link.href} className={styles.navLink}>
-              {link.label}
+          <Link href="/collections/new-arrivals" className={styles.navLink}>
+            New Arrivals
+          </Link>
+
+          {/* Women's Wear Dropdown */}
+          <div className={styles.navDropdown}>
+            <Link href="/collections/womens-wear" className={styles.navLink}>
+              Women&apos;s Wear
             </Link>
-          ))}
+            <div className={styles.dropdownPanel}>
+              {WOMENS_CATEGORIES.map((cat) => (
+                <Link key={cat.href} href={cat.href} className={styles.dropdownLink}>
+                  {cat.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Men's Wear Dropdown */}
+          <div className={styles.navDropdown}>
+            <Link href="/collections/mens-wear" className={styles.navLink}>
+              Men&apos;s Wear
+            </Link>
+            <div className={styles.dropdownPanel}>
+              {MENS_CATEGORIES.map((cat) => (
+                <Link key={cat.href} href={cat.href} className={styles.dropdownLink}>
+                  {cat.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </nav>
 
         {/* Logo */}
