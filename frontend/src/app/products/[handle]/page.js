@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useCart } from '@/context/CartContext';
 import { getProductByHandle } from '@/data/products';
 import { formatPrice } from '@/lib/formatPrice';
+import RelatedProducts from '@/components/RelatedProducts/RelatedProducts';
 import styles from './product.module.css';
 
 export default function ProductPage() {
@@ -204,6 +205,9 @@ export default function ProductPage() {
           </div>
         </div>
       </div>
+
+      {/* Related Products */}
+      <RelatedProducts currentHandle={product.handle} category={product.tags.find(t => t !== 'bestseller' && t !== 'new-arrival' && t !== 'womens-wear' && t !== 'mens-wear') || product.category} />
     </div>
   );
 }

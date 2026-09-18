@@ -278,3 +278,12 @@ export function getProductByHandle(handle) {
 export function getCollectionByHandle(handle) {
   return MOCK_COLLECTIONS.find((c) => c.handle === handle) || null;
 }
+
+/**
+ * Helper: get related products by category (excluding the current product)
+ */
+export function getRelatedProducts(currentHandle, category, limit = 4) {
+  return MOCK_PRODUCTS
+    .filter((p) => p.handle !== currentHandle && p.tags.includes(category))
+    .slice(0, limit);
+}
